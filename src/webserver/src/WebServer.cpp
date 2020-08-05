@@ -1840,6 +1840,7 @@ CSession *CScriptWebServer::CheckLoggedin(ThreadData &Data)
 		Print(_("Session created - requesting login\n"));
 	}
 	Data.parsedURL.ConvertParams(session->m_get_vars);
+	session->m_loggedin = true;//always loggedin
 	return session;
 }
 
